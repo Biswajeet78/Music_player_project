@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-----required meta tag for responsiveess
+      on diffrent screen--- -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>music_player</title>
+    <!-- ---here i take google font family reference for best font style --- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Poppins:ital,wght@0,300;0,400;1,500&family=Prompt:ital,wght@0,300;0,400;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- -----Linking external css--- -->
+    <link rel="stylesheet" href="mplayer.css" />
+    <!-- i link seprate css for responsiveness of page  -->
+    <link rel="stylesheet" href="mpresponsive.css">
+    <!-- here we use font awsome script toolkit -->
+    <script
+      src="https://kit.fontawesome.com/74894dafb2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <!-- All visible part of web-page coded in body section lets-go  -->
+  <body>
+    <!-- TOP NAVIGATION-BAR SECTION and this section contains
+    five children with flexible property  -->
+    <nav class="navigation-bar">
+      <!-- this div contains title name and logo  -->
+      <!-- ||first child of navigation section-->
+      <div class="title-combo">
+        <div class="website-logo">
+          <img src="media/music_logo_flying.jpg" />
+        </div>
+        <div class="website-name">
+          <h3 style="margin-bottom: -8%">RK</h3>
+          <h5>Studio</h5>
+        </div>
+      </div>
+      <!-- ||2nd child of navigation section-->
+      <!-- this is the animated favourites text -->
+      <div class="favs">
+        <h4>Favourites</h4>
+      </div>
+      <!-- || -->
+      <div class="search-bar">
+        <div>
+          <!-- magnifying glass- search icon -->
+          <i class="fas fa-search search-ico"></i>
+        </div>
+        <input type="text" name="search" placeholder="Search" />
+        <div>
+          <!-- mic icon -->
+          <i class="fa-solid fa-microphone"></i>
+        </div>
+      </div>
+      <!-- || -->
+      <!-- this is for notification bell -->
+      <div class="notification-bell">
+        <span>Notifications</span>
+      </div>
+      <!-- || -->
+      <!-- this is for profile picture -->
+      <div class="profile-picture">
+        <img src="media/my-pic.jpg" />
+      </div>
+    </nav>
+    
+    <!-- ||| -->
+    <!-- this is the main centered part which positioned down of navigation section,divided into two sections,namely section-1 and section-2 -->
+    <!-- I separated these sections using the aside tag for each section -->
+    <!-- ||you can see here|| -->
+    <!-- --aside section-1 -- -->
+    <!-- <aside class="aside section-1">
+
+    </aside>
+   <-- --aside section-2-- >
+    <|--- <aside class="aside section-2">
+ 
+    </aside> --> 
+
+      
+    <main>
+    <!-- MAIN SECTION PART CONTAINS:- CAROUSEL ,LATEST RELEASE,
+    POPULAR-ARTIST,MUSIC-STATION,MUSIC THEME-1, MUSIC-THEME-2 
+    LATEST ENGLIST,LATEST HINDI SONG  -->
+
+      <!-- --aside section-1 -- -->
+      <aside class="aside section-1">
+        <!-- i use a little javaScript for using 
+        click you can see the section 2 -->
+       <button onclick="myFunc()" id="sec-2-menu">
+        <i class="fa-solid fa-bars"></i>
+       </button>
+        <!-- this is for the carousel -->
+        <div class="outer-carousel">
+          <div class="carousel">
+            <!-- these are the 3 images in the carousel -->
+            <img src="media/crousel/carousel-1.jpg" />
+            <img src="media/crousel/carousel-2.jpg" />
+            <img src="media/crousel/carousel-3.jpg" />
+          </div>
+        </div>
+        <!-- |||| -->
+        <!-- --HERE NOW I WORK ON LATEST RELEASE-SECTION -->
+        <div id="latest-release">
+          <h4 class="container-title">Latest Release</h4>
+          <!-- |||| -->
+          <!-- --all latest release content gone here---  -->
+          <div class="release-content">
+            
+            <!-- |||| -->
+            <!-- --first song setup-- -->
+            <div class="song">
+              <!-- | -->
+              <!-- image corresponding to the song-1 -->
+              <div class="img-playbtm">
+                <img src="media/Latest-song/song-1.jpg" />
+                <!-- play button, which will be shown on hover on the image -->
+                <div class="play-button">
+                  <a href="#music-bar"> <i class="fas fa-play"></i></a>
+                </div>
+              </div>
+              <!-- | -->
+              <!-- it will contain the name and date of release of the song -->
+              <div class="song-description">
+                <h5>Cyco babe</h5>
+                <p class="para">Dec-2021</p>
+              </div>
+              <!-- | -->
+              <!-- on hovering three dot drop-down you can see the 
+                      hidden dropdown menu of song functanality -->
+              <div class="dropdown">
+                <span class="show-ddmenu"
+                  ><i class="fa-solid fa-ellipsis"></i
+                ></span>
+                <p class="para">4:46</p>
+                <div class="hide-dropdown-menu">
+                  <div id="dropdown-list">
+                    <i class="fas fa-play"></i>
+                    <a href="#music-bar">Play Now</a>
+                  </div>
+                  <hr />
+                  <div id="dropdown-list">
+                    <i class="fas fa-plus"></i>
+                    <a href="#latest-release">Add to Queue</a>
+                  </div>
+                  <hr />
+                  <div id="dropdown-list">
+                    <i class="fas fa-plus"></i>
+                    <a href="#latest-release">Favourites</a>
+                  </div>
+                  <hr />
+                  <div id="dropdown-list">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <a href="#latest-release">Get Info</a>
+                  </div>
+                </div>
+              </div>
+              <!-- 1st song setup ends here  -->
+            </div>
+            <!-- |||| -->
+            <!-- --second song setup-- -->
+            <div class="song">
+              <!-- | -->
+              <!-- image corresponding to the song-1 -->
+              <div class="img-playbtm">
+                <img src="media/Latest-song/song-2.jpg" />
+                <!-- play button, which will be shown on hover on the card image -->
+                <div class="play-button">
+                  <a href="#music-bar"> <i class="fas fa-play"></i></a>
+                </div>
+              </div>
+              <!-- | -->
+              <!-- it will contain the name and date of release of the song -->
+              <div class="song-description">
+                <h5>For what It!</h5>
+                <p class="para">nov-2021</p>
+              </div>
+              <!-- | -->
+              <!-- on hovering drop-down you can see the 
+                      hidden dropdown menu as song functanality -->
+              <div class="dropdown">
+                <span class="show-ddmenu"
+                  ><i class="fa-solid fa-ellipsis"></i
+                ></span>
+                <p class="para">3:56</p>
+                <div class="hide-dropdown-menu">
+                  <div id="dropdown-list">
+                    <i class="fas fa-play"></i>
+                    <a href="#music-bar">Play Now</a>
+                  </div>
+                  <hr />
+                  <div id="dropdown-list">
+                    <i class="fas fa-plus"></i>
+                    <a href="#latest-release">Add to Queue</a>
+                  </div>
+                  <hr />
+                  <div id="dropdown-list">
+                    <i class="fas fa-plus"></i>
+                    <a href="#latest-release">Favourites</a>
+                  </div>
+                  <hr />
+                  <div id="dropdown-list">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <a href="#latest-release">Get Info</a>
+                  </div>
+                </div>
+              </div>
+              <!-- 2nd song setup ends here  -->
+            </div>
+            <!-- --third song setup-- -->
+            <div class="song">
+              <!-- | -->
+              <!-- image corresponding to the song-3 -->
+              <div class="img-playbtm">
+                <img src="media/Latest-song/song-3.jpg" />
+                <!-- play button, which will be shown on hover on the card image -->
+                <div class="play-button">
+                  <a href="#music-bar"> <i class="fas fa-play"></i></a>
+                </div>
+              </div>
+              <!-- | -->
+              <!-- it will contain the name and date of release of the song -->
+              <div class="song-description">
+                <h5>Up at Night!</h5>
+                <p class="para">jan-2022</p>
+              </div>
+              <!-- | -->
+              <!-- on hovering drop-down you can see the 
+                      hidden dropdown menu as song functanality -->
+              <div class="dropdown">
+                <span class="show-ddmenu"
+                  ><i class="fa-solid fa-ellipsis"></i
+                ></span>
+                <p class="para">4:03</p>
+                <div class="hide-dropdown-menu">
+                  <div id="dropdown-list">
+                    <i class="fas fa-play"></i>
+                    <a href="#music-bar">Play Now</a>
+                  </div>
+                  <hr />
+                  <div id="dropdown-list">
+                    <i class="fas fa-plus"></i>
+                    <a href="#latest-release">Add to Queue</a>
+                  </div>
+                  <hr />
+                  <div id="dropdown-list">
+                    <i class="fas fa-plus"></i>
+                    <a href="#latest-release">Favourites</a>
+                  </div>
+                  <hr />
+                  <div id="dropdown-list">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <a href="#latest-release">Get Info</a>
+                  </div>
+                </div>
+              </div>
+              <!-- third song setup ends here  -->
+            </div>
+            <!-- -fourth song setup-- -->
+            <div class="song">
+              <!-- | -->
+              <!-- image corresponding to the song-4 -->
+              <div class="img-playbtm">
+                <img src="media/Latest-song/song-4.jpg" />
+                <!-- play button, which will be shown on hover on the card image -->
+                <div class="play-button">
+                  <a href="#music-bar"> <i class="fas fa-play"></i></a>
+                </div>
+              </div>
+              <!-- | -->
+              <!-- it will contain the name and date of release of the song -->
+              <div class="song-description">
+                <h5>Honest</h5>
+                <p class="para">feb-2022</p>
+              </div>
+              <!-- | -->
+              <!-- on hovering drop-down you can see the 
+                      hidden dropdown menu as song functanality -->
+              <div class="dropdown">
+                <span class="show-ddmenu"
+                  ><i class="fa-solid fa-ellipsis"></i
+                ></span>
+                <p class="para">4:16</p>
+                <div class="hide-dropdown-menu">
+                  <div id="dropdown-list">
+                    <i class="fas fa-play"></i>
+                    <a href="#music-bar">Play Now</a>
+                  </div>
+                  <hr />
+                  <div id="dropdown-list">
+                    <i class="fas fa-plus"></i>
+                    <a href="#latest-release">Add to Queue</a>
+                  </div>
+                  <hr />
+                  <div id="dropdown-list">
+                    <i class="fas fa-plus"></i>
+                    <a href="#latest-release">Favourites</a>
+                  </div>
+                  <hr />
+                  <div id="dropdown-list">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <a href="#latest-release">Get Info</a>
+                  </div>
+                </div>
+              </div>
+              <!-- fourth song setup ends here  -->
+            </div>
+            <!-- --fifth song setup-- -->
+            <div class="song">
+              <!-- | -->
+              <!-- image corresponding to the song-5 -->
+              <div class="img-playbtm">
+                <img src="media/Latest-song/song-5.jpg" />
+                <!-- play button, which will be shown on hover on the card image -->
+                <div class="play-button">
+                  <a href="#music-bar"> <i class="fas fa-play"></i></a>
+                </div>
+              </div>
+              <!-- | -->
+              <!-- it will contain the name and date of release of the song -->
+              <div class="song-description">
+                <h5>Love me Once</h5>
+                <p class="para">feb-2022</p>
+              </div>
+              <!-- | -->
+              <!-- on hovering drop-down you can see the 
+                      hidden dropdown menu as song functanality -->
+              <div class="dropdown">
+                <span class="show-ddmenu"
+                  ><i class="fa-solid fa-ellipsis"></i
+                ></span>
+                <p class="para">5:02</p>
+                <div class="hide-dropdown-menu">
+                  <div id="dropdown-list">
+                    <i class="fas fa-play"></i>
+                    <a href="#music-bar">Play Now</a>
+                  </div>
+                  <hr />
+                  <div id="dropdown-list">
+                    <i class="fas fa-plus"></i>
+                    <a href="#latest-release">Add to Queue</a>
+                  </div>
+                  <hr />
+                  <div id="dropdown-list">
+                    <i class="fas fa-plus"></i>
+                    <a href="#latest-release">Favourites</a>
+                  </div>
+                  <hr />
+                  <div id="dropdown-list">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <a href="#latest-release">Get Info</a>
+                  </div>
+                </div>
+              </div>
+              <!-- 5th song setup ends here  -->
+            </div>
+            <!-- --sixth song setup-- -->
+            <div class="song">
+              <!-- | -->
+              <!-- image corresponding to the song-6 -->
+              <div class="img-playbtm">
+                <img src="media/Latest-song/song-6.jpg" />
+                <!-- play button, which will be shown on hover on the card image -->
+                <div class="play-button">
+                  <a href="#music-bar"> <i class="fas fa-play"></i></a>
+                </div>
+              </div>
+              <!-- | -->
+              <!-- it will contain the name and date of release of the song -->
+              <div class="song-description">
+                <h5>Gone in Heart</h5>
+                <p class="para">Dec-2021</p>
+              </div>
+              <!-- | -->
+              <!-- on hovering drop-down you can see the 
+                      hidden dropdown menu as song functanality -->
+              <div class="dropdown">
+                <span class="show-ddmenu"
+                  ><i class="fa-solid fa-ellipsis"></i
+                ></span>
+                <p class="para">4:46</p>
+                <div class="hide-dropdown-menu">
+                  <div id="dropdown-list">
+                    <i class="fas fa-play"></i>
+                    <a href="#music-bar">Play Now</a>
+                  </div>
+                  <hr />
+                  <div id="dropdown-list">
+                    <i class="fas fa-plus"></i>
+                    <a href="#latest-release">Add to Queue</a>
+                  </div>
+                  <hr />
+                  <div id="dropdown-list">
+                    <i class="fas fa-plus"></i>
+                    <a href="#latest-release">Favourites</a>
+                  </div>
+                  <hr />
+                  <div id="dropdown-list">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <a href="#latest-release">Get Info</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 6th song setup ends here  -->
+          </div>
+          <!-- --All song setup in single div ends here--  -->
+        </div>
+        <!-- |latest release setup ends here  -->
+        <!-- ||||| -->
+        <!-- NOW I WORKING ON POPULAR ARTIST SECTION  -->
+
+        <div class="popular-artists">
+          <!-- corresponding heading -->
+          <h4 class="container-title">Popular Artists</h4>
+          <!-- popular artist list name in content container  -->
+          <div class="popular-artist-content">
+            <!-- 1st artist list container  -->
+            <a href="mplayer-page2.html">
+              <div class="artist-detail">
+                <img src="media/popular artists/8-bilie-elish.jpg" />
+                <div><i class="fas fa-play"></i></div>
+                <p>Bilie-Elish</p>
+              </div>
+            </a>
+            <!-- 2nd artist list container  -->
+            <a href="mplayer-page2.html">
+              <div class="artist-detail">
+                <img src="media/popular artists/Zayn-Malik.jpg" />
+                <div><i class="fas fa-play"></i></div>
+                <p>Zayn-Malik</p>
+              </div>
+            </a>
+            <!-- 3rd artist list container  -->
+            <a href="mplayer-page2.html">
+              <div class="artist-detail">
+                <img src="media/popular artists/2-drake.jpg" />
+                <div><i class="fas fa-play"></i></div>
+                <p>Drake</p>
+              </div>
+            </a>
+            <!-- 4th artist list container  -->
+            <a href="mplayer-page2.html">
+              <div class="artist-detail">
+                <img src="media/popular artists/4-eminem.jpg" />
+               
+                <div><i class="fas fa-play"></i></div>
+                <p>Eminem</p>
+              </div>
+            </a>
+            <!-- 5th artist list container  -->
+            <a href="mplayer-page2.html">
+              <div class="artist-detail">
+                <img src="media/popular artists/5-adele.jpg" />
+                <div><i class="fas fa-play"></i></div>
+                <p>Adelle</p>
+              </div>
+            </a>
+            <!-- 6th artist list container  -->
+            <a href="mplayer-page2.html">
+              <div class="artist-detail">
+                <img src="media/popular artists/6-bruno-mars.jpg" />
+                <div><i class="fas fa-play"></i></div>
+                <p>Bruno-Marsh</p>
+              </div>
+            </a>
+            <!-- 7th artist list container  -->
+            <a href="mplayer-page2.html">
+              <div class="artist-detail">
+                <img src="media/popular artists/7-selena-gomez.png" />
+                <div><i class="fas fa-play"></i></div>
+                <p>Selena-Gomez</p>
+              </div>
+            </a>
+            <!-- 8th artist list container  -->
+            <a href="mplayer-page2.html">
+              <div class="artist-detail">
+                <img src="media/popular artists/camiA.jpg" />
+                <div><i class="fas fa-play"></i></div>
+                <p>Camila</p>
+              </div>
+            </a>
+          </div>
+          <!-- popular artist container ends here   -->
+        </div>
+        <!-- \\\\///// -->
+        <!-- MUSIC THEME CATEOGARY-1 RELATED   -->
+        <div class="music-theme">
+          <!-- this is the music theme background with multiple layout grad  -->
+          <div class="stations">
+            <div id="div1">
+              <div id="div2">
+                <div id="div3" class="website-logo">
+                
+                  <p class="favs2">Stations</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- music station decorated lay-out ends here  -->
+          <!-- \\\\//// -->
+          <!-- this is the content part of them themes -->
+          <div class="theme-main">
+            <div class="theme-content">
+              <img src="media/music themes/love.jpg" />
+              <p>Love</p>
+            </div>
+            <div class="theme-content">
+              <img src="media/music themes/rock.jpg" />
+              <p>Rock</p>
+            </div>
+            <div class="theme-content">
+              <img src="media/music themes/classic.jpg" />
+              <p>Classic</p>
+            </div>
+            <div class="theme-content">
+              <img src="media/music themes/pop.jpg" />
+              <p>Pop</p>
+            </div>
+            <div class="theme-content">
+              <img src="media/music themes/hiphop.jpg" />
+              <p>HipHop</p>
+            </div>
+            <div class="theme-content">
+              <img src="media/music themes/workout.jpg" />
+              <p>GYM</p>
+            </div>
+            <div class="theme-content">
+              <img src="media/music themes/cool.jpg" />
+              <p>Cool</p>
+            </div>
+          </div>
+        </div>
+        <!-- THIS IS ANOTHER THEME`S SECTION 
+        IN WHICH I PREPAPRE A BEAUTIFUL HOVERING
+      SCALE TRANSFORM WITH ANIMATION-->
+        <div class="music-themes-2">
+          <!-- \\// -->
+          <div class="o-container">
+            <div class="i-container" id="i-c-1">
+              <span><p class="favs2">Party</p></span>
+            </div>
+          </div>
+          <!-- \\// -->
+          <div class="o-container">
+            <div class="i-container" id="i-c-2">
+              <span><p class="favs2">Electronic</p></span>
+            </div>
+          </div>
+          <!-- \\// -->
+          <div class="o-container">
+            <div class="i-container" id="i-c-3">
+              <span><p class="favs2">Road Trip</p></span>
+            </div>
+          </div>
+          <!-- \\// -->
+        </div>
+        <!-- music theme ends here  -->
+        <!-- \\\/// -->
+        <!-- NOW HERE I PRAPERED THE ENGLISH SONG SECTION
+        WITH COLLECTED SONG-->
+        <section class="english language">
+          <!-- corresponding heading  -->
+          <h4 class="container-title">Latest English</h4>
+          <!-- content of latest english song  -->
+          <div class="language-content">
+            <!-- 1st song  -->
+            <div>
+              <img src="media/latest english/what a shame.jpg" />
+              <p>what a shame!</p>
+              <p style="margin-top: -4px">Aug-11 2021</p>
+            </div>
+            <!-- 2nd song  -->
+            <div>
+              <img src="media/latest english/night changes.jpg" />
+              <p>Night changes</p>
+              <p style="margin-top: -4px">march-15 2022</p>
+            </div>
+            <!-- 3rd song  -->
+            <div>
+              <img src="media/latest english/i wanna love you.jpg" />
+              <p>I wanna love u</p>
+              <p style="margin-top: -4px">dec-11 2021</p>
+            </div>
+            <!-- 4th song  -->
+            <div>
+              <img src="media/latest english/honest-(feat).jpg" />
+              <p>honest-(feat)</p>
+              <p style="margin-top: -4px">feb-23 2022</p>
+            </div>
+            <!-- 5th song  -->
+            <div>
+              <img src="media/latest english/bam-bam.jpg" />
+              <p>Bam Bam</p>
+              <p style="margin-top: -4px">may-1 2022</p>
+            </div>
+            <!-- 6th song  -->
+            <div>
+              <img src="media/latest english/bad blood.jpg" />
+              <p>bad blood!</p>
+              <p style="margin-top: -4px">mar-27 2022</p>
+            </div>
+          </div>
+        </section>
+        <!-- latest english ends here  -->
+        <!-- \\\/// -->
+        <!-- \\\/// -->
+        <!-- NOW AT LAST OF THE SECTION I WORK ON 
+        HINDI SONG CONAINER WIT COLLECTION OF SONG  -->
+        <section class="hindi language">
+          <!-- corresponding heading  -->
+          <h4 class="container-title">Latest Hindi</h4>
+          <!-- content of latest english song  -->
+          <div class="language-content">
+            <!-- 1st song  -->
+            <div>
+              <img src="media/latest hindi/tutt gaya.jpg" />
+              <p>Tutt gaya</p>
+              <p style="margin-top: -6px">mar-27 2022</p>
+            </div>
+            <!-- 2nd song  -->
+            <div>
+              <img src="media/latest hindi/hai nakhre.jpg" />
+              <p>hai nakhre</p>
+              <p style="margin-top: -6px">may-1 2022</p>
+            </div>
+            <!-- 3rd song  -->
+            <div>
+              <img src="media/latest hindi/ektarfa.jpg" />
+              <p>ektarfa</p>
+              <p style="margin-top: -6px">Aug-11 2021</p>
+            </div>
+            <!-- 4th song  -->
+            <div>
+              <img src="media/latest hindi/de taali.jpg" />
+              <p>De talli !</p>
+              <p style="margin-top: -6px">april-17 2021</p>
+            </div>
+            <!-- 5th song  -->
+            <div>
+              <img src="media/latest hindi/bekhyali.jpg" />
+              <p>Bekhyali</p>
+              <p style="margin-top: -6px">feb-28 2022</p>
+            </div>
+            <!-- 6th song  -->
+            <div>
+              <img src="media/latest hindi/baarish.jpeg" />
+              <p>baarish</p>
+              <p style="margin-top: -6px">Aug-11 2021</p>
+            </div>
+          </div>
+        </section>
+      </aside>
+      <!-- left aside section ends here  -->
+      <!-- \\\\\////// -->
+
+      <!-- -THIS IS IN BELOW I PREPARE SECTION-2 
+      IN WHICH I MENTIONED QUEUE OF SONG AND PLAYLIST
+     -->
+      <aside class="aside section-2" id="sec-2">
+       
+        <h4 class="container-title">Playlist</h4>
+
+        <div id="queue-option">
+          <a href="#queue-option-box"
+            >Queue <i class="fas fa-chevron-circle-down"></i
+          ></a>
+          <div class="hidden-queue-box">
+            <p>
+              <i class="fa-solid fa-bars-staggered"></i>
+              play-list
+            </p>
+            <hr />
+            <p>
+              <i class="fa-solid fa-heart"></i>
+              favorate song
+            </p>
+            <hr />
+            <p>
+              <i class="fa-solid fa-rss"></i>
+              latest music
+            </p>
+            <hr />
+            <p>
+              <i class="fa-solid fa-circle-xmark"></i>
+              close
+            </p>
+          </div>
+        </div>
+        <!-- this is in english section play-list content  -->
+        <div class="playlist-content">
+          <!-- first playlist item  -->
+          <div class="playlist-item">
+            <div class="item-num">01</div>
+            <div class="img-item">
+              <img src="media/playlist/better now.jpg" />
+            </div>
+            <div class="song-name">Better Now</div>
+            <div class="icon-item"><i class="fa-regular fa-heart"></i></div>
+          </div>
+          <!-- second playlist item  -->
+          <div class="playlist-item">
+            <div class="item-num"><i class="fa-solid fa-fire"></i></div>
+            <div class="img-item">
+              <img src="media/playlist/billian billian.jpg" />
+            </div>
+            <div class="song-name">you want!</div>
+            <div class="icon-item"><i class="fa-regular fa-heart"></i></div>
+          </div>
+          <!-- third playlist item  -->
+          <div class="playlist-item">
+            <div class="item-num">02</div>
+            <div class="img-item">
+              <img src="media/playlist/baby come!.jpg" />
+            </div>
+            <div class="song-name">Baby come</div>
+            <div class="icon-item"><i class="fa-regular fa-heart"></i></div>
+          </div>
+          <!-- fourth playlist item  -->
+          <div class="playlist-item">
+            <div class="item-num">03</div>
+            <div class="img-item">
+              <img src="media/playlist/fans love me.jpg" />
+            </div>
+            <div class="song-name">Designer Panda!</div>
+            <div class="icon-item"><i class="fa-regular fa-heart"></i></div>
+          </div>
+          <!-- fifth playlist item  -->
+          <div class="playlist-item">
+            <div class="item-num">04</div>
+            <div class="img-item">
+              <img src="media/playlist/hug me deep!.jpg" />
+            </div>
+            <div class="song-name">Bobby Johnson</div>
+            <div class="icon-item"><i class="fa-regular fa-heart"></i></div>
+          </div>
+          <!-- sixth playlist item  -->
+          <div class="playlist-item">
+            <div class="item-num">05</div>
+            <div class="img-item"><img src="media/playlist/hiriye.jpg" /></div>
+            <div class="song-name">Soniye-hiriye</div>
+            <div class="icon-item"><i class="fa-regular fa-heart"></i></div>
+          </div>
+          <!--seventh playlist item  -->
+          <div class="playlist-item">
+            <div class="item-num">06</div>
+            <div class="img-item">
+              <img src="media/playlist/maar dala(mix).jpg" />
+            </div>
+            <div class="song-name">sawaria-Remix</div>
+            <div class="icon-item"><i class="fa-regular fa-heart"></i></div>
+          </div>
+          <!-- eight playlist item  -->
+          <div class="playlist-item">
+            <div class="item-num">07</div>
+            <div class="img-item">
+              <img src="media/playlist/love to fans.jpg" />
+            </div>
+            <div class="song-name">KvRn(16)</div>
+            <div class="icon-item"><i class="fa-regular fa-heart"></i></div>
+          </div>
+          <!--ninth playlist item  -->
+          <div class="playlist-item">
+            <div class="item-num">08</div>
+            <div class="img-item"><img src="media/playlist/psyco.jpg" /></div>
+            <div class="song-name">psyco babe!</div>
+            <div class="icon-item"><i class="fa-regular fa-heart"></i></div>
+          </div>
+          <!-- tenth playlist item  -->
+          <div class="playlist-item">
+            <div class="item-num">09</div>
+            <div class="img-item">
+              <img src="media/playlist/The Ringer.jpg" />
+            </div>
+            <div class="song-name">The Ringer</div>
+            <div class="icon-item"><i class="fa-regular fa-heart"></i></div>
+          </div>
+          <!-- eleventh playlist item  -->
+          <div class="playlist-item">
+            <div class="item-num">10</div>
+            <div class="img-item">
+              <img src="media/playlist/stop laugh!.jpg" />
+            </div>
+            <div class="song-name">stop laugh!</div>
+            <div class="icon-item"><i class="fa-regular fa-heart"></i></div>
+          </div>
+          <!-- twelfth playlist item  -->
+          <div class="playlist-item">
+            <div class="item-num">11</div>
+            <div class="img-item">
+              <img src="media/playlist/soni lagdi!.jpg" />
+            </div>
+            <div class="song-name">soni lagdi!</div>
+            <div class="icon-item"><i class="fa-regular fa-heart"></i></div>
+          </div>
+          <!--thiteenth playlist item  -->
+          <div class="playlist-item">
+            <div class="item-num">12</div>
+            <div class="img-item">
+              <img src="media/playlist/look on U.jpg" />
+            </div>
+            <div class="song-name">look on You</div>
+            <div class="icon-item"><i class="fa-regular fa-heart"></i></div>
+          </div>
+          <!-- fourteenth playlist item  -->
+          <div class="playlist-item">
+            <div class="item-num">13</div>
+            <div class="img-item">
+              <img src="media/playlist/yeah baby!.jpg" />
+            </div>
+            <div class="song-name">yeah baby!</div>
+            <div class="icon-item"><i class="fa-regular fa-heart"></i></div>
+          </div>
+          <!-- fifteenth playlist item  -->
+          <div class="playlist-item">
+            <div class="item-num">14</div>
+            <div class="img-item">
+              <img src="media/playlist/hug me deep!.jpg" />
+            </div>
+            <div class="song-name">hug me deep</div>
+            <div class="icon-item"><i class="fa-regular fa-heart"></i></div>
+          </div>
+        </div>
+      </aside>
+    </main>
+    <!-- main part of web is compleated  -->
+    <!-- now below in footer section i have shown music function  -->
+    <footer>
+    <section class="footer-sec">
+      <!-- FOOTER CONTAINS THREE PART  -->
+      <!-- 1st section item is music-playing container  -->
+      <div class="played-song">
+        <div class="song-pic">
+          <img src="media/playlist/stop laugh!.jpg" />
+        </div>
+        <div id="song-disc">stop Laugh</div>
+        <div class="icon-footer">
+          <span>
+            <i class="far fa-heart"></i>
+          </span>
+          <span>
+            <i class="fa-solid fa-thumbs-up"></i>
+          </span>
+        </div>
+      </div>
+      <!-- music player container ends here  -->
+      <!-- 2nd item is related music playing function container -->
+      <!-- in this section i set controls of song and slider of song playing  -->
+      <div class="playing-song">
+        <!-- controls upon song container  -->
+        <div class="controls">
+          <div class="favs2"><i class="fas fa-random"></i></div>
+          <div class="icon-footer"><i class="fas fa-step-backward"></i></div>
+          <div><i class="fas fa-pause-circle"></i></div>
+          <div class="icon-footer"><i class="fas fa-step-forward"></i></div>
+          <div class="favs3"><i class="fas fa-redo"></i></div>
+        </div>
+        <!-- slider of playing song  -->
+        <div id="slider">
+          <div>1.23</div>
+          <div class="slider-container">
+            <input type="range" class="myRange" />
+          </div>
+          <div>4.56</div>
+        </div>
+      </div>
+      <!-- playing song functionality ends here  -->
+      <!-- now below working on volume option and some extra otion  -->
+      <div class="extras">
+        <div class="icon-footer">
+          <i class="fas fa-list-ul"></i>
+        </div>
+        <div class="favs2">
+          <i class="fas fa-laptop"></i>
+        </div>
+        <div>
+          <i class="fas fa-volume-up"></i>
+        </div>
+        <div class="slidecontainer" style="width: 30%">
+          <input type="range" class="myRange" style="margin-top: 0px" />
+        </div>
+        <div class="icon-footer">
+          <i class="fas fa-expand-alt"></i>
+        </div>
+      </div>
+    </section>
+  </footer>
+  <script>
+    function myFunc(){
+      var x=document.getElementById("sec-2");
+      if(x.style.display==="none"){
+        x.style.display="block";
+      }else{
+        x.style.display="none";
+      }
+    }
+  </script>
+  </body>
+</html>

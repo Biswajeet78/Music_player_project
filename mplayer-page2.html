@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-----required meta tag for responsiveess
+      on diffrent screen--- -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>music_player</title>
+    <!-- ---here i take google font family reference for best font style --- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Poppins:ital,wght@0,300;0,400;1,500&family=Prompt:ital,wght@0,300;0,400;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- -----Linking external css--- -->
+    <link rel="stylesheet" href="mplayer.css" />
+    <!-- i link seprate css for responsiveness of page  -->
+    <link rel="stylesheet" href="mpresponsive.css" />
+    <!-- here i link font awsom script for diffrent icon class  -->
+    <script
+      src="https://kit.fontawesome.com/74894dafb2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+<!-- |||| -->
+  <!-- All visible part of web-page coded in body section lets-go  -->
+  <body>
+    <!-- top fixed navigation bar section  -->
+    <nav class="navigation-bar">
+      <!-- ||first child of navigation section-->
+        <!-- this div contains title name and logo  -->
+      <div class="title-combo">
+        <div class="website-logo">
+          <img src="media/music_logo_flying.jpg" />
+        </div>
+        <div class="website-name">
+          <h3 style="margin-bottom: -8%">RK</h3>
+          <h5>Studio</h5>
+        </div>
+      </div>
+      <!-- ||2nd child of navigation section-->
+      <!-- this is the animated favourites text -->
+      <div class="favs">
+        <h4>Favourites</h4>
+      </div>
+      <!-- || -->
+      <div class="search-bar">
+        <div>
+          <!-- magnifying glass- search icon -->
+          <i class="fas fa-search search-ico"></i>
+        </div>
+        <input type="text" name="search" placeholder="Search" />
+        <div>
+          <!-- mic icon -->
+          <i class="fa-solid fa-microphone"></i>
+        </div>
+      </div>
+      <!-- || -->
+      <!-- this is for notification bell -->
+      <div class="notification-bell">
+        <span>Notifications</span>
+      </div>
+      <!-- || -->
+      <!-- this is for profile picture -->
+      <div class="profile-picture">
+        <img src="media/my-pic.jpg" />
+      </div>
+    </nav>
+    <!-- |||| -->
+    <!-- NOTE:-THE NAVIGATION SECTION AND FOOTER 
+ SECTION CODE IS SIMILAR AS ITS ORIGINAL PAGE -->
+    <!-- this is the main part of the page and it is divided into two sections, namely section 1 and section 2-->
+    <!-- I have separated these sections using the aside tag for each section -->
+    <main>
+      <!-- aside section 1 -->
+      <aside class="aside section-1">
+        <button onclick="myFunc()" id="sec-2-menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <!-- first i make jumbotron section -->
+        <div class="j-tron">
+          <div class="j-tron-image">
+            <!-- there is nothing in this div because all the images and all are added by css -->
+          </div>
+          <!-- jumbotron details -->
+          <div class="j-tron-detail">
+            <!-- descriptive part of the jumbotron this will contain name , number of followers and all -->
+            <div class="descriptive-part">
+              <div class="song-name-main">
+                <h1>ColdPlay</h1>
+              </div>
+              <div class="followers">17M Followers</div>
+              <p class="author">British Band</p>
+              <!-- short description of the current author -->
+              <p class="desc">
+                Coldplay are a British rock band formed in London in 1996.
+                Vocalist, rhythm guitarist and pianist Chris Martin, lead
+                guitarist Jonny Buckland, bassist Guy Berryman, and drummer Will
+                Champion met at University College London and began playing
+                music together from .first calling themselves
+                Pectoralz and then Starfish before finally changing their name
+                to Coldplay
+              </p>
+            </div>
+            <!-- action part -->
+            <div class="action-part">
+              <!-- action buttons -->
+              <div class="btns">
+                <button>Play All</button>
+                <button>Follow</button>
+                <span>147 Track || 98 Album </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NOW BELOW PLAY-LIST ITEM CONTAINER CONTAINS 
+        RELATED SONG -->
+        <div class="artist-pl-song">
+          <!-- 1st play list items -->
+          <div class="artist-pl-item">
+            <div class="left">
+              <div class="list-no">01</div>
+              <div>
+                <img src="media/playlist/baby come!.jpg" />
+              </div>
+              <div class="song-nam">baby come!</div>
+            </div>
+
+            <div class="center">
+              <p>4:14</p>
+            </div>
+
+            <div class="right">
+              <div>
+                <i class="far fa-heart"></i>
+              </div>
+              <div>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+          </div>
+          <!-- 2nd play list items -->
+          <div class="artist-pl-item">
+            <div class="left">
+              <div class="list-no">02</div>
+              <div>
+                <img src="media/playlist/better now.jpg" />
+              </div>
+              <div class="song-nam">better Now</div>
+            </div>
+
+            <div class="center">
+              <p>3:57</p>
+            </div>
+
+            <div class="right">
+              <div>
+                <i class="far fa-heart"></i>
+              </div>
+              <div>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+          </div>
+          <!-- 3rd play list items -->
+          <div class="artist-pl-item">
+            <div class="left">
+              <div class="list-no">03</div>
+              <div>
+                <img src="media/playlist/billian billian.jpg" />
+              </div>
+              <div class="song-nam">billian billian</div>
+            </div>
+
+            <div class="center">
+              <p>5:09</p>
+            </div>
+
+            <div class="right">
+              <div>
+                <i class="far fa-heart"></i>
+              </div>
+              <div>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+          </div>
+          <!-- 4th play list items -->
+          <div class="artist-pl-item">
+            <div class="left">
+              <div class="list-no">04</div>
+              <div>
+                <img src="media/playlist/fans love me.jpg" />
+              </div>
+              <div class="song-nam">fans love Me</div>
+            </div>
+
+            <div class="center">
+              <p>4:23</p>
+            </div>
+
+            <div class="right">
+              <div>
+                <i class="far fa-heart"></i>
+              </div>
+              <div>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+          </div>
+          <!-- 5th play list items -->
+          <div class="artist-pl-item">
+            <div class="left">
+              <div class="list-no">05</div>
+              <div>
+                <img src="media/playlist/hiriye.jpg" />
+              </div>
+              <div class="song-nam">Soniye!</div>
+            </div>
+
+            <div class="center">
+              <p>3:34</p>
+            </div>
+
+            <div class="right">
+              <div>
+                <i class="far fa-heart"></i>
+              </div>
+              <div>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+          </div>
+          <!-- 6th play list items -->
+          <div class="artist-pl-item">
+            <div class="left">
+              <div class="list-no">06</div>
+              <div>
+                <img src="media/playlist/hug me deep!.jpg" />
+              </div>
+              <div class="song-nam">Hug me Deep</div>
+            </div>
+
+            <div class="center">
+              <p>4:17</p>
+            </div>
+
+            <div class="right">
+              <div>
+                <i class="far fa-heart"></i>
+              </div>
+              <div>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+          </div>
+          <!-- 7th play list items -->
+          <div class="artist-pl-item">
+            <div class="left">
+              <div class="list-no">07</div>
+              <div>
+                <img src="media/playlist/look on U.jpg" />
+              </div>
+              <div class="song-nam">look at U!</div>
+            </div>
+
+            <div class="center">
+              <p>5:19</p>
+            </div>
+
+            <div class="right">
+              <div>
+                <i class="far fa-heart"></i>
+              </div>
+              <div>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+          </div>
+          <!-- 8th play list items -->
+          <div class="artist-pl-item">
+            <div class="left">
+              <div class="list-no">08</div>
+              <div>
+                <img src="media/playlist/love to fans.jpg" />
+              </div>
+              <div class="song-nam">Designer!</div>
+            </div>
+
+            <div class="center">
+              <p>3:54</p>
+            </div>
+
+            <div class="right">
+              <div>
+                <i class="far fa-heart"></i>
+              </div>
+              <div>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+          </div>
+          <!-- 9th play list items -->
+          <div class="artist-pl-item">
+            <div class="left">
+              <div class="list-no">09</div>
+              <div>
+                <img src="media/playlist/maar dala(mix).jpg" />
+              </div>
+              <div class="song-nam">Kill Me!</div>
+            </div>
+
+            <div class="center">
+              <p>5:21</p>
+            </div>
+
+            <div class="right">
+              <div>
+                <i class="far fa-heart"></i>
+              </div>
+              <div>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+          </div>
+          <!-- 10th play list items -->
+          <div class="artist-pl-item">
+            <div class="left">
+              <div class="list-no">10</div>
+              <div>
+                <img src="media/playlist/psyco.jpg" />
+              </div>
+              <div class="song-nam">Psyco-queen</div>
+            </div>
+
+            <div class="center">
+              <p>4:47</p>
+            </div>
+
+            <div class="right">
+              <div>
+                <i class="far fa-heart"></i>
+              </div>
+              <div>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+          </div>
+          <!-- 11th play list items -->
+          <div class="artist-pl-item">
+            <div class="left">
+              <div class="list-no">11</div>
+              <div>
+                <img src="media/playlist/soni lagdi!.jpg" />
+              </div>
+              <div class="song-nam">Looking Awsom!</div>
+            </div>
+
+            <div class="center">
+              <p>3:24</p>
+            </div>
+
+            <div class="right">
+              <div>
+                <i class="far fa-heart"></i>
+              </div>
+              <div>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+          </div>
+          <!-- 12th play list items -->
+          <div class="artist-pl-item">
+            <div class="left">
+              <div class="list-no">12</div>
+              <div>
+                <img src="media/playlist/stop laugh!.jpg" />
+              </div>
+              <div class="song-nam">Stop Laugh</div>
+            </div>
+
+            <div class="center">
+              <p>4:14</p>
+            </div>
+
+            <div class="right">
+              <div>
+                <i class="far fa-heart"></i>
+              </div>
+              <div>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+          </div>
+          <!-- 13th play list items -->
+          <div class="artist-pl-item">
+            <div class="left">
+              <div class="list-no">13</div>
+              <div>
+                <img src="media/playlist/The Ringer.jpg" />
+              </div>
+              <div class="song-nam">the Ringer!</div>
+            </div>
+
+            <div class="center">
+              <p>4:51</p>
+            </div>
+
+            <div class="right">
+              <div>
+                <i class="far fa-heart"></i>
+              </div>
+              <div>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- aside section 2 -->
+      <aside class="aside section-2" id="page-2-sec">
+        <div class="similar">
+          <div class="similar-heading">
+            <h2 class="favs2">Similar Artist</h2>
+            <h5>View All</h5>
+          </div>
+          <!-- similar artist list  -->
+          <div class="sa-list">
+            <!-- list -->
+            <div class="sa-list-item">
+              <div>
+                <img src="media/songs/adele.jpg" />
+              </div>
+              <div class="sa-name">Adele</div>
+              <p class="sa-play-btn"><i>Play</i></p>
+              <i class="fa-solid fa-circle-play"></i>
+            </div>
+            <!-- list -->
+            <div class="sa-list-item">
+              <div>
+                <img src="media/songs/Liam Payne.jpg" />
+              </div>
+              <div class="sa-name">Liam Payne</div>
+              <p class="sa-play-btn"><i>Play</i></p>
+              <i class="fa-solid fa-circle-play"></i>
+            </div>
+            <!-- list -->
+            <div class="sa-list-item">
+              <div>
+                <img src="media/songs/Dua Lipa.jpg" />
+              </div>
+              <div class="sa-name">Dua lipa</div>
+              <p class="sa-play-btn"><i>Play</i></p>
+              <i class="fa-solid fa-circle-play"></i>
+            </div>
+            <!-- list -->
+            <div class="sa-list-item">
+              <div>
+                <img src="media/songs/Harry Styles.jpg" />
+              </div>
+              <div class="sa-name">Harry Style!</div>
+              <p class="sa-play-btn"><i>Play</i></p>
+              <i class="fa-solid fa-circle-play"></i>
+            </div>
+            <!-- list -->
+            <div class="sa-list-item">
+              <div>
+                <img src="media/songs/sorry.jpg" />
+              </div>
+              <div class="sa-name">Justin Bieber</div>
+              <p class="sa-play-btn"><i>Play</i></p>
+              <i class="fa-solid fa-circle-play"></i>
+            </div>
+          </div>
+        </div>
+        <!-- |||| -->
+        <h5 id="middle-text" class="favs2">Queue</h5>
+        <div class="sa-playlist">
+          <!-- queue -->
+          <!-- item-no-1  -->
+          <div class="q-cont">
+            <div class="q-item">
+              <div class="q-item-1">
+                <div class="q-no">01</div>
+                <div class="q-img">
+                  <img src="media/songs/Liam Payne.jpg" />
+                </div>
+                <div>go Asap</div>
+              </div>
+              <div class="q-item-2">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+            </div>
+            <div class="q-item">
+              <div class="q-item-1">
+                <div class="q-no">02</div>
+                <div class="q-img">
+                  <img src="media/songs/Dua Lipa.jpg" />
+                </div>
+                <div>deigner!</div>
+              </div>
+              <div class="q-item-2">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+            </div>
+            <div class="q-item">
+              <div class="q-item-1">
+                <div class="q-no">03</div>
+                <div class="q-img">
+                  <img src="media/songs/Weeknd.jpg" />
+                </div>
+                <div>kvrn(16)</div>
+              </div>
+              <div class="q-item-2">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+            </div>
+            <div class="q-item">
+              <div class="q-item-1">
+                <div class="q-no">04</div>
+                <div class="q-img">
+                  <img src="media/songs/falling.jpg" />
+                </div>
+                <div>Falling</div>
+              </div>
+              <div class="q-item-2">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+            </div>
+            <div class="q-item">
+              <div class="q-item-1">
+                <div class="q-no">05</div>
+                <div class="q-img">
+                  <img src="media/songs/willow.jpeg" />
+                </div>
+                <div>weekend!</div>
+              </div>
+              <div class="q-item-2">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+            </div>
+            <div class="q-item">
+              <div class="q-item-1">
+                <div class="q-no">06</div>
+                <div class="q-img">
+                  <img src="media/songs/shit.png" />
+                </div>
+                <div>Wellow</div>
+              </div>
+              <div class="q-item-2">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+            </div>
+            <div class="q-item">
+              <div class="q-item-1">
+                <div class="q-no">07</div>
+                <div class="q-img">
+                  <img src="media/songs/havana.jpg" />
+                </div>
+                <div>havana</div>
+              </div>
+              <div class="q-item-2">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+    <!-- |||| -->
+    <!-- now below in footer section i have shown music function  -->
+    <footer>
+      <section class="footer-sec">
+        <!-- footer contains three items  -->
+        <!-- 1st section item is music-playing container  -->
+        <div class="played-song">
+          <div class="song-pic">
+            <img src="media/playlist/soni lagdi!.jpg" />
+          </div>
+          <div id="song-disc">OG bob!</div>
+          <div class="icon-footer">
+            <span>
+              <i class="far fa-heart"></i>
+            </span>
+            <span>
+              <i class="fa-solid fa-thumbs-up"></i>
+            </span>
+          </div>
+        </div>
+        <!-- music player container ends here  -->
+        <!-- 2nd item is related music playing function container -->
+        <!-- in this section i set controls of song and slider of song playing  -->
+        <div class="playing-song">
+          <!-- controls upon song container  -->
+          <div class="controls">
+            <div class="favs2"><i class="fas fa-random"></i></div>
+            <div class="icon-footer"><i class="fas fa-step-backward"></i></div>
+            <div><i class="fas fa-pause-circle"></i></div>
+            <div class="icon-footer"><i class="fas fa-step-forward"></i></div>
+            <div class="favs3"><i class="fas fa-redo"></i></div>
+          </div>
+          <!-- slider of playing song  -->
+          <div id="slider">
+            <div>1.23</div>
+            <div class="slider-container">
+              <input type="range" class="myRange" />
+            </div>
+            <div>4.56</div>
+          </div>
+        </div>
+        <!-- playing song functionality ends here  -->
+        <!-- now below working on volume option and some extra otion  -->
+        <div class="extras">
+          <div class="icon-footer">
+            <i class="fas fa-list-ul"></i>
+          </div>
+          <div class="favs2">
+            <i class="fas fa-laptop"></i>
+          </div>
+          <div>
+            <i class="fas fa-volume-up"></i>
+          </div>
+          <div class="slidecontainer" style="width: 30%">
+            <input type="range" class="myRange" style="margin-top: 0px" />
+          </div>
+          <div class="icon-footer">
+            <i class="fas fa-expand-alt"></i>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <script>
+      function myFunc() {
+        var x = document.getElementById("page-2-sec");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

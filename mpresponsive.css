@@ -1,0 +1,270 @@
+
+/* ----MEDIA QUERY FOR RESPONSIBVENESS OF WEB-PAGE ----  */
+
+/* FIRST I FOCUSING ON RESPOSIVENESS IN RANGE OF 1000PX */
+
+@media screen and (max-width: 1000px) {
+	/* ||navigattion section responsiveness in THIS range|| */
+	.favs{
+		display: none !important;
+	}
+	/* reduced size of search bar */
+	.search-bar{
+		width: 30%;
+	}
+    /* ||body section all container and element responsiveness in this range|| */
+   /* NO REQUIRED  */
+	/* ||responsiveness of footer section in range|| */
+	.extras > div{
+		padding-left: 5px;
+	 }
+}
+
+/* THEN I FOCUSING ON RESPOSIVENESS IN RANGE 850PX */
+
+@media screen and (max-width: 850px) {
+   /* ||navigattion section responsivenes in THIS range|| */
+		.notification-bell{
+			display: none;
+		}
+      /* ||body section all container and element responsiveness in this range|| */
+      
+		.section-1 {
+            width: 100%;
+			padding-top: 8px;
+		}
+		.section-2 {
+		    display:none;
+			opacity: 1;
+			position: absolute;
+			width: 350px;
+			height: 70vh;
+			background-color:rgb(107, 12, 110);
+			box-shadow: 0px 0px 2px 1px white;
+			right: 0px;
+			top: 18%;
+			z-index:6;
+			overflow: scroll;
+			box-sizing: border-box;
+			/* padding-top:16px; */
+		}
+		#sec-2-menu{
+			display: block;
+			cursor: pointer;
+		}
+		#sec-2-close{
+			display: block;
+			cursor: pointer;
+		}
+
+
+		.section-2::-webkit-scrollbar {
+			display:none;
+		}
+        .outer-carousel {
+            height: 9%;
+        }
+        /* carousel image */
+        .carousel img {
+            height: 23vw;
+            width: 34.5vw;
+        }
+        /* first and 3rd images of the carousel */
+        .carousel img:nth-child(1) {
+            left: 56vw;
+        }
+        .carousel img:nth-child(3) {
+            right: 56vw;
+        } /* since the size of the carousel images is increased, the hover size should also be increased */
+        .carousel img:hover {
+            height: 27vw;
+            width: 40.5vw;
+        }
+		.o-container {
+			width: 30vw;
+			height: 25vw;
+			min-width: 123px;
+			min-height: 82px;
+		}
+		.o-container .i-container span p{
+			font-size: 1em ;
+		}
+		.language-content >div >p {
+			font-size: .55em;
+			letter-spacing:0px;
+		}
+		.artist-detail > p{
+			font-size: .6em;
+		}
+		#middle-text{
+			display: none;
+		}
+        /* ||| */
+	    .sa-playlist{
+			position: relative;
+			top: 10%;
+			width: 98%;
+			height: 50vh;
+		}
+        
+
+        
+		/* here also in last i add some property related footer responsiveness */
+		/* |||| */
+		.extras > div:nth-child(4) {
+			display: none;
+		}
+	}
+
+    /* ATLAST I FOCUSING ON RESPOSIVENESS IN RANGE 650PX */
+
+	@media screen and (max-width: 650px){
+	   /* ||body section all container and element responsiveness in this range|| */
+		.search-bar > div:nth-child(1) {
+			display: inline-block;
+			position: absolute;
+			left: 5%;
+			top: 22%;
+		}
+		/* mic icon */
+		.search-bar > div:nth-child(3) {
+			display: inline-block;
+			position: absolute;
+			right: 0%;
+			top: 22%;
+		}
+		.favs{
+			display: block !important;
+		}
+		.profile-picture{
+			display: none !important;
+		}
+		.navigation-bar{
+			font-size: .7em;
+		}
+		
+
+             /* ||body section all container and element responsiveness in this range|| */
+		.section-1::-webkit-scrollbar {
+			display:none;
+		}
+		.release-content{
+			margin: auto;
+			width: 75vw;
+			display: flex;
+			flex-direction: column;
+		}
+		.song{
+			width: 100%;
+			
+		}
+		.container-title{
+			font-size: 1em;
+		}
+
+		/* all the theme section related 
+		responsive css is here  */
+        
+
+		.music-theme{
+			display: flex;
+			flex-direction: column;
+		}
+		.stations{
+			height:180px ;
+			width: 50vw;
+		}
+		.stations> div{
+			position: absolute;
+			left:32%;
+			top: 8%;
+			width: 30vw;
+			height: 30vw;
+		}
+		#div1 {
+			width: 33vw;
+			height: 20vw;
+		}
+		#div2 {
+			width: 29vw;
+			height: 24vw;
+		}
+		#div3 {
+			width: 26vw;
+			height: 26vw;
+		}
+		#div3 img {
+			width: 12vw;
+			height: 12vw;
+		}
+		/* text part in that section which contains "stations" text */
+		#div3 p {
+			font-size: 4vw;
+		}
+		.theme-main{
+			width: 100%;
+		}
+		.theme-content {
+			width: 18vw;
+			height: 18vw;
+		}
+		.theme-content p {
+			font-size: 3vw;
+			top: -18.8vw;
+		}
+		.theme-main div img {
+			width: 18vw;
+			height: 18vw;
+		}
+		.section-1{
+			width: 98%;
+		}
+		.o-container {
+			width: 38vw;
+			height: 30vw;
+			min-width: 123px;
+			min-height: 82px;
+		}
+		.o-container .i-container span p{
+			font-size: 1em ;
+		}
+		
+
+
+
+		/* in last i add  property related footer responsiveness */
+		.extras > div:nth-child(5) {
+			display: none;
+		}
+		.song-pic img{
+			display: none;
+		}
+		.played-song{
+			width: 10% !important;
+		}
+		.controls > div{
+			padding:0px 5px;
+		}
+		.footer-sec>div:nth-child(2){
+			width: 55%;
+		}
+		.played-song > div{
+			padding-left: 6px;
+		}	
+
+	}
+	/* A LITTLE MEDIA QUERY FOR SUBSTRON section  */
+@media screen and (max-width: 850px) {
+	.desc{
+		font-size: .5em;
+	}
+	.j-tron{
+		margin-top: 50px;
+	}
+	.artist-pl-item{
+		font-size: .65em;
+	}
+}
+
+
+
